@@ -47,8 +47,8 @@ mv migrate.linux-amd64 /usr/local/bin/migrate
 apt --yes install postgresql
 
 sudo -i -u postgres psql -c "CREATE DATABASE liveboard"
-sudo -i -u postgres psql -d liveboard -c "CREATE EXTENSION IF NOT EXISTS citext"
-sudo -i -u postgres psql -d liveboard -c "CREATE ROLE liveboard WITH LOGIN PASSWORD '${DB_PASSWORD}'"
+sudo -i -u postgres psql -d greenlight -c "CREATE EXTENSION IF NOT EXISTS citext"
+sudo -i -u postgres psql -d greenlight -c "CREATE ROLE liveboard WITH LOGIN PASSWORD '${DB_PASSWORD}'"
 
 echo "LIVEBOARD_DB_DSN='postgres://liveboard:${DB_PASSWORD}@localhost/liveboard'" >> /etc/environment
 
