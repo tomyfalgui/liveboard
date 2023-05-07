@@ -2,4 +2,4 @@ module github.com/tomyfalgui/liveboard
 
 go 1.20
 
-require github.com/DATA-DOG/go-sqlmock v1.5.0 // indirect
+require github.com/julienschmidt/httprouter v1.3.0 // indirect
